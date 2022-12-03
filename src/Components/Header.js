@@ -1,19 +1,26 @@
 import Link from "next/link";
-import styles from "../Styles/Header.module.css";
+import styles from "../styles/Header.module.css";
 
-export default function Header(img){
-    const icon = img == "erro" ? 'e' : 'a';
+export default function Header({img}){
+    var name = "JT";
+
+    if (img == "prog") {
+        name = "JT-Programming"
+    }
+    if (img == "model") {
+        name = "JT-Modeling"
+    } 
 
     return (
         <div className={styles['header']}>
             <div className ={styles['header-title']}><h1>
-                <Link href="/">JT</Link>
+                <Link href="/">{name}</Link>
                 </h1></div>
             <div className="header-list">
                 <ul className={styles['header-items']}>
-                    <li>Programming</li>
-                    <li>Modeling</li>
-                    <li>Contact me</li>
+                    <li><Link href="/Programming">Programming</Link></li>
+                    <li><Link href="/Modeling">Modeling</Link></li>
+                    <li><Link href="/Contact">Contact me</Link></li>
                 </ul>
             </div>
         </div>

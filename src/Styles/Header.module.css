@@ -9,9 +9,10 @@
 
 .header-title{
     margin-left: 2rem;
+    width: 20rem;
 }
 .header-items {
-    margin-left: 40rem;
+    margin-left: 20rem;
     list-style: none;
     display: flex;
     flex-direction: row;
